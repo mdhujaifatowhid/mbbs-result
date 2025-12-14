@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBBS Result 2025-2026</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#e9f5e9;
+}
+
+.container{
+  max-width:700px;
+  margin:20px auto;
+  background:#dff0d8;
+  border:3px solid #3c763d;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  padding:10px;
+  background:#e6ffe6;
+  border-bottom:3px solid #3c763d;
+}
+
+.logo{
+  width:70px;
+  height:70px;
+  background:#c00;
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.header-text{
+  text-align:left;
+}
+
+.header-text h2{
+  margin:0;
+  color:#2e7d32;
+}
+
+.header-text p{
+  margin:2px 0;
+  font-size:14px;
+}
+
+.title{
+  background:#ffd966;
+  text-align:center;
+  padding:10px;
+  font-size:22px;
+  font-weight:bold;
+  border-bottom:3px solid #3c763d;
+}
+
+.search{
+  padding:20px;
+  text-align:center;
+}
+
+.search input{
+  width:70%;
+  padding:10px;
+  font-size:18px;
+  border:3px solid #f0ad4e;
+}
+
+.search button{
+  padding:10px 20px;
+  font-size:18px;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+.print-btn{
+  display:block;
+  width:200px;
+  margin:10px auto;
+  padding:10px;
+  background:#f0ad4e;
+  font-size:18px;
+  border:2px solid #3c763d;
+  cursor:pointer;
+}
+
+.result-title{
+  background:#ffd966;
+  padding:10px;
+  font-size:20px;
+  font-weight:bold;
+  text-align:center;
+  border-top:3px solid #3c763d;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+td{
+  border:2px solid #3c763d;
+  padding:10px;
+  background:#fff9c4;
+  font-size:16px;
+}
+
+.notfound{
+  color:red;
+  font-size:18px;
+  padding:10px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="logo"></div>
+    <div class="header-text">
+      <h2>MBBS Result 2025-2026</h2>
+      <p>Ministry of Health and Family Welfare</p>
+      <p>Directorate General of Medical Education</p>
+    </div>
+  </div>
+
+  <div class="title">MBBS Result 2025-2026</div>
+
+  <div class="search">
+    <input type="text" id="roll" placeholder="Enter roll number here">
+    <br><br>
+    <button onclick="showResult()">Result</button>
+  </div>
+
+  <button class="print-btn">Print your result</button>
+
+  <div id="output"></div>
+
+</div>
+
+<script>
+function showResult(){
+  const roll = document.getElementById("roll").value.trim();
+  const output = document.getElementById("output");
+
+  if(roll === "1700967"){
+    output.innerHTML = `
+      <div class="result-title">Your result is below</div>
+      <table>
+        <tr><td>Roll No.</td><td>1700967</td></tr>
+        <tr><td>Student Name</td><td>Md. Hujaifa</td></tr>
+        <tr><td>Test Score</td><td>68.50</td></tr>
+        <tr><td>Merit Score</td><td>185.50</td></tr>
+        <tr><td>Merit Position</td><td>9337</td></tr>
+        <tr><td>Allotted College Code</td><td> </td></tr>
+        <tr><td>Status</td><td>Passed</td></tr>
+      </table>
+    `;
+  } else {
+    output.innerHTML = `<div class="notfound">Result not found</div>`;
+  }
+}
+</script>
+
+</body>
+</html>
